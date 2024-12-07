@@ -10,13 +10,20 @@ class Storage {
   addItem(item) {
     this.items.push(item);
   }
-  
+
   removeItem(item) {
     if (this.items.includes(item)) {
       this.items.splice(this.items.indexOf(item), 1);
     }
   }
 }
+
+const storage = new Storage([
+    "Нанітоіди",
+    "Пролонгер",
+    "Залізні жупи",
+    "Антигравітатор",
+  ]);
 
 const items = storage.getItems();
 console.table(items);
